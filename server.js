@@ -205,8 +205,6 @@ app.delete("/tasks/:id", (req, res) => {
 
   taskList.splice(0, taskList.length, ...updatedTaskList)
   
-  //tasklist is a const cant be reassigned
-  Object.assign(taskList, updatedTaskList)
   res.status(204).send();
 });
 
